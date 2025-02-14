@@ -12,12 +12,14 @@ class SelfCheckFinish extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(
-            AppLocalizations.of(context)!.selfcheck,
-          ),
+      appBar: AppBar(
+        title: Text(
+          AppLocalizations.of(context)!.selfcheck,
         ),
-        body: Padding(
+      ),
+      body: SizedBox(
+        width: double.infinity,
+        child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -57,6 +59,7 @@ class SelfCheckFinish extends StatelessWidget {
                         ),
                         const Icon(
                           LineIcons.calendarAlt,
+                          color: Colors.white,
                         ),
                       ],
                     ),
@@ -74,6 +77,7 @@ class SelfCheckFinish extends StatelessWidget {
                         ),
                         const Icon(
                           LineIcons.stethoscope,
+                          color: Colors.white,
                         ),
                       ],
                     ),
@@ -82,6 +86,8 @@ class SelfCheckFinish extends StatelessWidget {
               )
             ],
           ),
-        ));
+        ),
+      ),
+    );
   }
 }

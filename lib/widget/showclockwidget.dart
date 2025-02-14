@@ -17,7 +17,7 @@ class ShowClockWidget {
   _showClock() {
     Navigator.of(context).push(
       showPicker(
-        backgroundColor: Theme.of(context).primaryColor,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         dialogInsetPadding: EdgeInsets.symmetric(
           horizontal: MediaQuery.of(context).size.width * 0.05,
         ),
@@ -32,18 +32,6 @@ class ShowClockWidget {
         context: context,
         barrierDismissible: false,
         minuteInterval: TimePickerInterval.ONE,
-        hmsStyle: const TextStyle(
-          color: Colors.white,
-        ),
-        okStyle: const TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.bold,
-        ),
-        cancelStyle: const TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.bold,
-        ),
-        //TODO: CHECK CLOCK
         value: context.read<ReminderProvider>().time,
         onChange: (newTime) {
           context.read<ReminderProvider>().time = newTime;

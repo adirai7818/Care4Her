@@ -1,6 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
@@ -14,8 +13,10 @@ import 'providers/breastcancerprovider.dart';
 import 'providers/changelogprovider.dart';
 import 'providers/doctorprovider.dart';
 import 'providers/languageprovider.dart';
+import 'providers/privacypolicyprovider.dart';
 import 'providers/reminderprovider.dart';
 import 'providers/selfcheckprovider.dart';
+import 'providers/termsconditionsprovider.dart';
 import 'screens/auth/auth.dart';
 import 'screens/onboarding/onboarding.dart';
 import 'screens/selfcheck/self_check_steps.dart';
@@ -25,8 +26,6 @@ import 'providers/nav_bar_provider.dart';
 import 'providers/themeprovider.dart';
 import 'services/permissionservice.dart';
 
-// TODO: implement dispose to whole project
-// TODO: make full app responsive
 final navigatorKey = GlobalKey<NavigatorState>();
 FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
     FlutterLocalNotificationsPlugin();
@@ -42,16 +41,12 @@ void main() async {
 
   ApiService.apirequest();
 
-  await SystemChrome.setEnabledSystemUIMode(
-    SystemUiMode.edgeToEdge,
-  );
   // TODO: fix landscape view
   //await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   await NotificationService().initNotification();
 
-  await Future.delayed(const Duration(seconds: 3), () {
-    FlutterNativeSplash.remove();
-  });
+  await Future.delayed(
+      const Duration(seconds: 3), () => FlutterNativeSplash.remove());
 
   //  handle notification tap in terminated state
   var initialNotification =
@@ -97,41 +92,47 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-        providers: [
-          ChangeNotifierProvider(
-            create: (_) => ThemeProvider(context),
-          ),
-          ChangeNotifierProvider(
-            create: (_) => LanguageProvider(),
-          ),
-          ChangeNotifierProvider(
-            create: (_) => PermissionService(),
-          ),
-          ChangeNotifierProvider(
-            create: (_) => AuthrizationProviders(),
-          ),
-          ChangeNotifierProvider(
-            create: (_) => NavBarProvider(),
-          ),
-          ChangeNotifierProvider(
-            create: (_) => BreastCancerProvider(),
-          ),
-          ChangeNotifierProvider(
-            create: (_) => SelfCheckProvider(),
-          ),
-          ChangeNotifierProvider(
-            create: (_) => DoctorProvider(),
-          ),
-          ChangeNotifierProvider(
-            create: (_) => ReminderProvider(),
-          ),
-          ChangeNotifierProvider(
-            create: (_) => ChangelogProvider(),
-          ),
-        ],
-        builder: (context, child) {
-          return Consumer<ThemeProvider>(
-              builder: (context, themeProvider, child) {
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => ThemeProvider(context),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => LanguageProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => PermissionService(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => AuthrizationProviders(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => NavBarProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => BreastCancerProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => SelfCheckProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => DoctorProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => ReminderProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => ChangelogProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => PrivacyPolicyProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => TermsConditionsProvider(),
+        ),
+      ],
+      builder: (context, child) {
+        return Consumer<ThemeProvider>(
+          builder: (context, themeProvider, child) {
             return MaterialApp(
               navigatorKey: navigatorKey,
               debugShowCheckedModeBanner: false,
@@ -139,20 +140,16 @@ class _MyAppState extends State<MyApp> {
               locale: Locale(context.watch<LanguageProvider>().languageCode),
               supportedLocales: AppLocalizations.supportedLocales,
               localizationsDelegates: AppLocalizations.localizationsDelegates,
-              theme: Styles.themeData(
-                context: context,
-                isDarkTheme: false,
-              ),
-              darkTheme: Styles.themeData(
-                context: context,
-                isDarkTheme: true,
-              ),
+              theme: Styles.themeData(isDarkTheme: false),
+              darkTheme: Styles.themeData(isDarkTheme: true),
               themeMode: context.watch<ThemeProvider>().themeMode,
               home: context.watch<LanguageProvider>().isBoardingCompleate
                   ? const Auth()
                   : const OnBoardingScreen(),
             );
-          });
-        });
+          },
+        );
+      },
+    );
   }
 }

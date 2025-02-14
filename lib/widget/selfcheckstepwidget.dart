@@ -32,11 +32,13 @@ class SelfCheckStepWidget extends StatelessWidget {
               SizedBox(
                 height: size.height * 0.015,
               ),
-              Text(
-                description,
-                style: const TextStyle(
-                  fontWeight: FontWeight.normal,
-                  fontSize: 18,
+              Flexible(
+                child: Text(
+                  description,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.normal,
+                    fontSize: 18,
+                  ),
                 ),
               ),
             ],
