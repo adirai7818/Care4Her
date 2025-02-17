@@ -14,7 +14,9 @@ import '../../widget/settingsectionwidget.dart';
 import '../../widget/settingsitemwidget.dart';
 import 'about.dart';
 import 'changelog.dart';
+import 'privacypolicy.dart';
 import 'profile.dart';
+import 'termsconditions.dart';
 
 class SettingScreen extends StatelessWidget {
   const SettingScreen({super.key});
@@ -151,14 +153,16 @@ class SettingScreen extends StatelessWidget {
           label: AppLocalizations.of(context)!.privacypolicy,
           buttonLabel: AppLocalizations.of(context)!.open,
           onTap: () async {
-            await Utils(context).launchURL(Consts.PRIVACY_POLICY_URL);
+            //   await Utils(context).launchURL(Consts.PRIVACY_POLICY_URL);
+            await Utils(context).push(widget: const PrivacyPolicyScreen());
           },
         ),
         SettingsButtonItem(
           label: AppLocalizations.of(context)!.termsconditions,
           buttonLabel: AppLocalizations.of(context)!.open,
           onTap: () async {
-            await Utils(context).launchURL(Consts.TERMS_CONDITIONS_URL);
+            // await Utils(context).launchURL(Consts.TERMS_CONDITIONS_URL);
+            await Utils(context).push(widget: const TermsConditionsScreen());
           },
         ),
       ],

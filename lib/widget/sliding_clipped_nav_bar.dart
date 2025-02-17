@@ -42,14 +42,16 @@ class SlidingClippedNavBarWidgetState
             ),
           ),
           drawer: const DrawerWidget(),
-          body: PageView(
-            physics: const NeverScrollableScrollPhysics(),
-            controller: navbarprovider.pageController,
-            children: const [
-              Awareness(),
-              BreastCancerPage(),
-              SelfCheckPage(),
-            ],
+          body: SafeArea(
+            child: PageView(
+              physics: const NeverScrollableScrollPhysics(),
+              controller: navbarprovider.pageController,
+              children: const [
+                Awareness(),
+                BreastCancerPage(),
+                SelfCheckPage(),
+              ],
+            ),
           ),
           bottomNavigationBar:
               Consumer<ThemeProvider>(builder: (context, themeprovider, child) {

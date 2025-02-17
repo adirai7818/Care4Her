@@ -4,8 +4,7 @@ import 'package:flutter/services.dart';
 import 'consts.dart';
 
 class Styles {
-  static ThemeData themeData(
-      {required bool isDarkTheme, required BuildContext context}) {
+  static ThemeData themeData({required bool isDarkTheme}) {
     return ThemeData(
       drawerTheme: DrawerThemeData(
         backgroundColor: isDarkTheme ? Colors.black : Colors.white,

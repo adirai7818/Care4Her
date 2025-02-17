@@ -56,7 +56,7 @@ class OnBoardingScreen extends StatelessWidget {
                           size: size,
                         ),
                         SizedBox(
-                          height: size.height * 0.1,
+                          height: size.height * 0.05,
                         ),
                         Text(
                           AppLocalizations.of(context)!.selectLanguage,
@@ -113,7 +113,7 @@ class OnBoardingScreen extends StatelessWidget {
       alignment: Alignment.bottomCenter,
       children: [
         SizedBox(
-          height: size.height * 0.4,
+          height: size.height * 0.30,
           // color: Theme.of(context).primaryColor,
           child: Image.asset(
             color: Theme.of(context).primaryColor,
