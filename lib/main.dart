@@ -138,8 +138,15 @@ class _MyAppState extends State<MyApp> {
               debugShowCheckedModeBanner: false,
               title: Consts.APP_NAME,
               locale: Locale(context.watch<LanguageProvider>().languageCode),
-              supportedLocales: AppLocalizations.supportedLocales,
-              localizationsDelegates: AppLocalizations.localizationsDelegates,
+              supportedLocales: [
+                    Locale('en', 'US'), // English
+                    Locale('hi', 'IN'), // Hindi
+                 ],
+              localizationsDelegates: [
+                AppLocalizations.delegate,
+                AppLocalizations.delegate,
+                AppLocalizations.delegate,
+              ],
               theme: Styles.themeData(isDarkTheme: false),
               darkTheme: Styles.themeData(isDarkTheme: true),
               themeMode: context.watch<ThemeProvider>().themeMode,

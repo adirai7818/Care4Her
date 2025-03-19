@@ -1,4 +1,4 @@
-name: mothercare
+name: Care4Her
 description: Breast Cancer Awareness Project
 
 # The following line prevents the package from being accidentally published to
@@ -44,6 +44,7 @@ dependencies:
   flutter_local_notifications: ^18.0.1
   flutter_localizations:
     sdk: flutter
+    
   flutter_markdown: ^0.7.6
   flutter_native_splash: ^2.4.4
   flutter_rating_bar: ^4.0.1
@@ -86,16 +87,16 @@ flutter_launcher_icons:
   remove_alpha_ios: true
   background_color_ios: "#ff80ab"
   web:
-    generate: false
+    generate: true
     image_path: "assets/logo.png"
     # background_color: "#hexcode"
     # theme_color: "#hexcode"
   windows:
-    generate: false
+    generate: true
     image_path: "assets/logo.png"
     # icon_size: 48 # min:48, max:256, default: 48
   macos:
-    generate: false
+    generate: true
     image_path: "assets/logo.png"
 
 flutter_native_splash:

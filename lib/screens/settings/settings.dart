@@ -8,7 +8,7 @@ import '../../providers/themeprovider.dart';
 import '../../utils/utils.dart';
 import '../../widget/customdropdownbutton.dart';
 
-import '../../widget/mothercarelogo.dart';
+import '../../widget/Care4Herlogo.dart';
 import '../../widget/settingsbuttonitemwidget.dart';
 import '../../widget/settingsectionwidget.dart';
 import '../../widget/settingsitemwidget.dart';
@@ -36,7 +36,7 @@ class SettingScreen extends StatelessWidget {
             _generalSection(context: context),
             _accountSection(context: context),
             _otherSection(context: context),
-            const MothercareLogo(),
+            const Care4HerLogo(),
             _changeLog(context: context),
             _credit(
               context: context,
@@ -132,7 +132,7 @@ class SettingScreen extends StatelessWidget {
       title: AppLocalizations.of(context)!.other,
       children: [
         SettingsButtonItem(
-          label: AppLocalizations.of(context)!.aboutMothercare,
+          label: AppLocalizations.of(context)!.aboutCare4Her,
           buttonLabel: AppLocalizations.of(context)!.open,
           onTap: () async {
             await Utils(context).push(
@@ -141,7 +141,7 @@ class SettingScreen extends StatelessWidget {
           },
         ),
         // SettingsButtonItem(
-        //   label: AppLocalizations.of(context)!.supportMothercare,
+        //   label: AppLocalizations.of(context)!.supportCare4Her,
         //   buttonLabel: AppLocalizations.of(context)!.donate,
         //   onTap: () async {
         //     await Utils(context).push(
@@ -161,7 +161,7 @@ class SettingScreen extends StatelessWidget {
           label: AppLocalizations.of(context)!.termsconditions,
           buttonLabel: AppLocalizations.of(context)!.open,
           onTap: () async {
-            // await Utils(context).launchURL(Consts.TERMS_CONDITIONS_URL);
+             await Utils(context).launchURL(Consts.TERMS_CONDITIONS_URL);
             await Utils(context).push(widget: const TermsConditionsScreen());
           },
         ),

@@ -1,6 +1,6 @@
 **Privacy Policy**
 
-This privacy policy is applicable to the Mother Care app (hereinafter referred to as "Application") for mobile devices, which was developed by Asraful Islam (hereinafter referred to as "Service Provider") as a an Open Source service. This service is provided "AS IS".
+This privacy policy is applicable to the Care4Her app (hereinafter referred to as "Application") for mobile devices, which was developed by Asraful Islam (hereinafter referred to as "Service Provider") as a an Open Source service. This service is provided "AS IS".
 
 **What information does the Application obtain and how is it used?**  
 **User Provided Information**

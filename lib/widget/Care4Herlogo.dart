@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:mothercare/utils/utils.dart';
+import 'package:Care4Her/utils/utils.dart';
 import 'package:provider/provider.dart';
 
 import '../const/consts.dart';
 import '../providers/languageprovider.dart';
 import '../providers/nav_bar_provider.dart';
 
-class MothercareLogo extends StatelessWidget {
-  const MothercareLogo({super.key});
+class Care4HerLogo extends StatelessWidget {
+  const Care4HerLogo({super.key});
 
   @override
   Widget build(BuildContext context) {

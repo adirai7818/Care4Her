@@ -160,11 +160,11 @@ class OnBoardingScreen extends StatelessWidget {
               height: 0,
             ),
             SelectionButtonWidget(
-              iconCondition: provider.languageCode == 'bn',
-              buttontitle: 'বাংলা',
+              iconCondition: provider.languageCode == 'hi',
+              buttontitle: 'हिन्दी',
               ontap: () {
-                provider.languageCode = 'bn';
-                provider.language = 'বাংলা';
+                provider.languageCode = 'hi';
+                provider.language = 'हिन्दी';
               },
             ),
           ],

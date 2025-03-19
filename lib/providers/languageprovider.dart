@@ -17,7 +17,7 @@ class LanguageProvider extends ChangeNotifier {
 
   final List<String> _languageList = [
     'English',
-    'বাংলা',
+    'हिन्दी',
   ];
   List<String> get languageList => _languageList;
   String _language = 'English';
@@ -26,8 +26,8 @@ class LanguageProvider extends ChangeNotifier {
     _language = language;
     if (language == 'English') {
       languageCode = 'en';
-    } else if (language == 'বাংলা') {
-      languageCode = 'bn';
+    } else if (language == 'हिन्दी') {
+      languageCode = 'hi';
     }
   }
 
@@ -61,7 +61,7 @@ class LanguageProvider extends ChangeNotifier {
   getLanguage() async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     _languageCode = prefs.getString('languageCode') ?? _languageCode;
-    _language = _languageCode == 'en' ? 'English' : 'বাংলা';
+    _language = _languageCode == 'en' ? 'English' : 'हिन्दी'; 
     Intl.defaultLocale = _languageCode;
   }
 

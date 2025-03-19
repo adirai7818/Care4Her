@@ -142,7 +142,7 @@ class IntroductionPageState extends State<IntroductionPage> {
 
   void _onIntroEnd(BuildContext context) async {
     context.read<LanguageProvider>().isBoardingCompleate = true;
-    // context.read<LanguageProvider>().boardingCompleated();
+     context.read<LanguageProvider>().boardingCompleated();
     await Utils(context).pushUntil(widget: const Auth());
   }
 }

@@ -46,12 +46,12 @@ class ChangelogProvider with ChangeNotifier {
 
   Future<void> fetchChangelog() async {
     _isFetching = true;
-    final url = Consts.CHANGE_LOG_URL;
+  final url = Consts.CHANGE_LOG_URL;
     try {
-      final response = await http.get(Uri.parse(url));
+     final response = await http.get(Uri.parse(url));
       if (response.statusCode == 200) {
-        _changelogContent = response.body;
-        notifyListeners();
+       _changelogContent = response.body;
+       notifyListeners();
       }
     } catch (e) {
       debugPrint(e.toString());

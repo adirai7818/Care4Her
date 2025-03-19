@@ -49,7 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "am": MessageLookupByLibrary.simpleMessage("AM"),
         "and": MessageLookupByLibrary.simpleMessage("And"),
         "applybutton": MessageLookupByLibrary.simpleMessage("Apply"),
-        "appname": MessageLookupByLibrary.simpleMessage(" Mother Care"),
+        "appname": MessageLookupByLibrary.simpleMessage(" Care4Her"),
         "awareness": MessageLookupByLibrary.simpleMessage("Awareness"),
         "awarenessBody1": MessageLookupByLibrary.simpleMessage(
             "The earlier breast cancer is treated, the greater the chance of long-term survival. Regular self-checks can help you detect problems earlier and get treatment faster."),

@@ -1,13 +1,13 @@
-Contributing Guidelines for Mother Care
+Contributing Guidelines for Care4Her
 ====================================
 
-Thank you for considering contributing to Mother Care! We appreciate your interest and support. Please take a moment to review these guidelines to ensure a smooth collaboration and a high-quality project.
+Thank you for considering contributing to Care4Her! We appreciate your interest and support. Please take a moment to review these guidelines to ensure a smooth collaboration and a high-quality project.
 
 Types of Contributions
 ----------------------
 There are several ways you can contribute to the project:
 
-1. **Bug Reports**: If you encounter any bugs or issues while using Mother Care, please submit a detailed bug report with steps to reproduce the problem.
+1. **Bug Reports**: If you encounter any bugs or issues while using Care4Her, please submit a detailed bug report with steps to reproduce the problem.
 
 2. **Feature Requests**: If you have a suggestion for a new feature or enhancement, please submit a feature request, clearly explaining the desired functionality and its benefits.
 
@@ -22,7 +22,7 @@ To begin contributing, follow these steps:
 2. Clone the forked repository to your local development environment:
 
    ```bash
-   git clone https://github.com/your-username/Mother-Care-Flutter.git
+   git clone https://github.com/your-username/Care4Her.git
    ```
 
 3. Create a new branch for your contributions:
@@ -79,12 +79,12 @@ Please note that we have a Code of Conduct in place to ensure a welcoming and in
 
 License
 -------
-By contributing to Mother Care, you agree that your contributions will be licensed under the project's chosen license.
+By contributing to Care4Her, you agree that your contributions will be licensed under the project's chosen license.
 
 Acknowledgments
 ---------------
-Thank you for your interest in contributing to Mother Care! Your contributions play a vital role in improving the project and making it more valuable for the community. We truly appreciate your time and effort.
+Thank you for your interest in contributing to Care4Her! Your contributions play a vital role in improving the project and making it more valuable for the community. We truly appreciate your time and effort.
 
 If you have any further questions, feel free to reach out to the project maintainers or consult the project's documentation for additional information. Happy coding!
 
-GitHub Repository: [Mother Care](https://github.com/Emon526/Mother-Care-Flutter)
+GitHub Repository: [Care4Her](https://github.com/Emon526/Care4Her)

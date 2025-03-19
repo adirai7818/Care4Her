@@ -3,7 +3,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../const/consts.dart';
 import '../../utils/utils.dart';
-import '../../widget/mothercarelogo.dart';
+import '../../widget/Care4Herlogo.dart';
 
 class AboutScreen extends StatelessWidget {
   const AboutScreen({super.key});
@@ -16,7 +16,7 @@ class AboutScreen extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              const MothercareLogo(),
+              const Care4HerLogo(),
               SizedBox(
                 height: 20,
               ),
@@ -27,28 +27,28 @@ class AboutScreen extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
               ),
+              //TextButton(
+                //onPressed: () async {
+                  //await Utils(context).launchURL(Consts.HOME_PAGE_URL);
+                //},
+                //child: Text('Homepage'),
+              //),
               TextButton(
                 onPressed: () async {
-                  await Utils(context).launchURL(Consts.HOME_PAGE_URL);
-                },
-                child: Text('Homepage'),
-              ),
-              TextButton(
-                onPressed: () async {
-                  await Utils(context).launchURL(Consts.PROJECT_URL);
+                //  await Utils(context).launchURL(Consts.PROJECT_URL);
                 },
                 child: Text('Source code (Github)'),
               ),
-              TextButton(
-                onPressed: () async {
-                  await Utils(context).launchURL(Consts.LICENSE_URL);
-                },
-                child: Text('License'),
-              ),
-              TextButton(
-                onPressed: () => Utils(context).showLicense(),
-                child: Text('License Notices'),
-              ),
+              //TextButton(
+                //onPressed: () async {
+                  //await Utils(context).launchURL(Consts.LICENSE_URL);
+                //},
+                //child: Text('License'),
+              //),
+              //TextButton(
+                //onPressed: () => Utils(context).showLicense(),
+                //child: Text('License Notices'),
+              //),
             ],
           ),
         ),

@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -28,15 +25,9 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for windows - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -50,20 +41,47 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCDN1u5Ws3fsE1zvqDL6nrD5tP4cVNHWew',
-    appId: '1:784961471473:android:ab42c70642020f00c27a50',
-    messagingSenderId: '784961471473',
-    projectId: 'mother-care-fd886',
-    storageBucket: 'mother-care-fd886.appspot.com',
+    apiKey: 'AIzaSyDUnlFdA1ihvMGm7RKFghaw0mQIpJXuO9U',
+    appId: '1:305506255355:android:4dfd57a9e899c7ff1ccb5e',
+    messagingSenderId: '305506255355',
+    projectId: 'Care4Her',
+    storageBucket: 'Care4Her.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyChg8eOZUkGKWgiYIiLHrZOGimzbmBSb5A',
-    appId: '1:784961471473:ios:114f907157641997c27a50',
-    messagingSenderId: '784961471473',
-    projectId: 'mother-care-fd886',
-    storageBucket: 'mother-care-fd886.appspot.com',
-    iosClientId: '784961471473-1ok36hgl16cbiap9ti54dm8r20jqt8gj.apps.googleusercontent.com',
-    iosBundleId: 'com.example.mothercare',
+    apiKey: 'AIzaSyAQMaRO3AsEnF6njtL9eNQiscBg3oMOmWk',
+    appId: '1:305506255355:ios:46f5f535c3772c271ccb5e',
+    messagingSenderId: '305506255355',
+    projectId: 'Care4Her',
+    storageBucket: 'Care4Her.firebasestorage.app',
+    iosBundleId: 'com.asrafulislam.Care4Her',
   );
+
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyBEZ7EWnrFflGWPk-Hjy1hgWG7FyAh0DGA',
+    appId: '1:305506255355:web:bb7dca80661678431ccb5e',
+    messagingSenderId: '305506255355',
+    projectId: 'Care4Her',
+    authDomain: 'Care4Her.firebaseapp.com',
+    storageBucket: 'Care4Her.firebasestorage.app',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyAQMaRO3AsEnF6njtL9eNQiscBg3oMOmWk',
+    appId: '1:305506255355:ios:46f5f535c3772c271ccb5e',
+    messagingSenderId: '305506255355',
+    projectId: 'Care4Her',
+    storageBucket: 'Care4Her.firebasestorage.app',
+    iosBundleId: 'com.asrafulislam.Care4Her',
+  );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyBEZ7EWnrFflGWPk-Hjy1hgWG7FyAh0DGA',
+    appId: '1:305506255355:web:f4fb6f739e793bc01ccb5e',
+    messagingSenderId: '305506255355',
+    projectId: 'Care4Her',
+    authDomain: 'Care4Her.firebaseapp.com',
+    storageBucket: 'Care4Her.firebasestorage.app',
+  );
+
 }
