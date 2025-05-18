@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "305506255355",
+    "project_id": "Care4Her",
+    "storage_bucket": "Care4Her.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:305506255355:android:4dfd57a9e899c7ff1ccb5e",
+        "android_client_info": {
+          "package_name": "com.asrafulislam.Care4Her"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUnlFdA1ihvMGm7RKFghaw0mQIpJXuO9U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
