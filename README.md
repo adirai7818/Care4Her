@@ -45,7 +45,7 @@ Screenshots of the actual app were taken during internal testing to demonstrate 
 ## Installation
 
 ```bash
-git clone https://github.com/itsdchanda/Care4Her.git
+git clone https://github.com/adirai7818/Care4Her
 cd Care4Her
 flutter pub get
 flutter run
